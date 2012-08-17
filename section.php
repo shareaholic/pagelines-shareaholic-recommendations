@@ -51,15 +51,25 @@
 class ShrRecommendationsSection extends PageLinesSection {
 
   function section_styles() {
-    if (!ploption('shr-recomm-style'))
+    if ((isset($_GET['sb_debug']) || isset($_POST['sb_debug']))) {
+      $script = 'http://www.spreadaholic.com/media/js/jquery.shareaholic-publishers-rd.js';
+    }
+    else
+      $script = 'https://dtym7iokkjlif.cloudfront.net/media/js/jquery.shareaholic-publishers-rd.min.js';
+    
+    wp_enqueue_script('shareaholic-recommendations-js', $script);
+  }
+
+  function section_head() {
+    if (!ploption('shr-recomm-style',$this->oset))
       $style = 'image';
     else
-      $style = ploption('shr-recomm-style');
+      $style = ploption('shr-recomm-style',$this->oset);
 
-    if (!ploption('shr-recomm-no'))
+    if (!ploption('shr-recomm-no',$this->oset))
       $number_recomm = '3';
     else
-      $number_recomm = ploption('shr-recomm-no');
+      $number_recomm = ploption('shr-recomm-no',$this->oset);
     
     $params = array(
         'link' => get_permalink(get_the_ID()),
@@ -74,17 +84,6 @@ class ShrRecommendationsSection extends PageLinesSection {
     echo '<script type="text/javascript">';
     echo $js;
     echo ';</script>';
-    
-    if ((isset($_GET['sb_debug']) || isset($_POST['sb_debug']))) {
-      $script = 'http://www.spreadaholic.com/media/js/jquery.shareaholic-publishers-rd.js';
-    }
-    else
-      $script = 'https://dtym7iokkjlif.cloudfront.net/media/js/jquery.shareaholic-publishers-rd.min.js';
-    
-    wp_enqueue_script('shareaholic-recommendations-js', $script);
-  }
-
-  function section_head() {
   }
 
   function section_template() {
