@@ -4,7 +4,7 @@
   Author: Shareaholic
   Author URI: http://shareaholic.com
   Version: 1.0.0
-  Description: Increase traffic and time on site for your content with Shareaholic’s related content tool, which recommends your own content at the bottom of each of your posts.
+  Description: Shareaholic is trusted by more than 200,000 websites, reaching 300,000,000 people each month.  Increase traffic and time on site for your content with Shareaholic’s related content tool, which recommends your own posts at the bottom of each article you publish. Choose between thumbnail and a list of links designs.
   Class Name: ShrRecommendationsSection
   Cloning: true
   External: http://www.shareaholic.com/publishers/recommendations/
@@ -117,10 +117,10 @@ class ShrRecommendationsSection extends PageLinesSection {
           ),* */
         'shr-recomm-style' => array(
             'type' => 'select',
-            'inputlabel' => 'Select Style',
+            'inputlabel' => 'Select Style:Choose between a list of links to your posts or thumbnails.',
             'title' => 'Select Style',
-            'shortexp' => 'Default style is Thumbnails.',
-            'exp' => 'Please choose between thumbnail and text styles.',
+            'shortexp' => 'Choose between a list of links to your posts or thumbnails.',
+            'exp' => '',
             'selectvalues' => array(
                 'image' => array('name' => 'Thumbnails'),
                 'text' => array('name' => 'Text')
@@ -131,7 +131,7 @@ class ShrRecommendationsSection extends PageLinesSection {
             'inputlabel' => 'Select No. of recommendations to display',
             'title' => 'Select No. of recommendations to display',
             'shortexp' => 'Default is 3.',
-            'exp' => 'No. of recommendations to display',
+            'exp' => '',
             'selectvalues' => array(
                 '3' => array('name' => '3'),
                 '4' => array('name' => '4')
@@ -140,14 +140,14 @@ class ShrRecommendationsSection extends PageLinesSection {
         'shr-recomm-terms' => array(
             'type' => 'text_content',
             'inputlabel' => 'By activating Shareaholic you agree to our <a href="http://www.shareaholic.com/terms/" target="_blank"> Terms of Service</a> and <a href="http://www.shareaholic.com/privacy/" target="_blank"> Privacy Policy</a>.',
-            'title' => 'Terms & Conditions.',
+            'title' => '',
             'shortexp' => '',
             'exp' => '',
         )
     );
     $tab_settings = array(
         'id' => 'shr-recomm-options',
-        'name' => 'Shareaholic Recommendations',
+        'name' => 'Shareaholic Related Content Widget Settings',
         'icon' => $this->icon,
         'clone_id' => $settings['clone_id'],
         'active' => $settings['active']
