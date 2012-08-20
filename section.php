@@ -117,10 +117,7 @@ class ShrRecommendationsSection extends PageLinesSection {
           ),* */
         'shr-recomm-style' => array(
             'type' => 'select',
-            'inputlabel' => 'Select Style:Choose between a list of links to your posts or thumbnails.',
-            'title' => 'Select Style',
-            'shortexp' => 'Choose between a list of links to your posts or thumbnails.',
-            'exp' => '',
+            'inputlabel' => 'Select Style: Choose between a list of links to your posts or thumbnails',
             'selectvalues' => array(
                 'image' => array('name' => 'Thumbnails'),
                 'text' => array('name' => 'Text')
@@ -128,10 +125,7 @@ class ShrRecommendationsSection extends PageLinesSection {
         ),
         'shr-recomm-no' => array(
             'type' => 'select',
-            'inputlabel' => 'Select No. of recommendations to display',
-            'title' => 'Select No. of recommendations to display',
-            'shortexp' => 'Default is 3.',
-            'exp' => '',
+            'inputlabel' => 'Select Style: Select number of related posts to display',
             'selectvalues' => array(
                 '3' => array('name' => '3'),
                 '4' => array('name' => '4')
