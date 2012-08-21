@@ -3,11 +3,10 @@
   Section: Shareaholic Related Content Plugin
   Author: Shareaholic
   Author URI: http://shareaholic.com
-  Version: 1.0.0
-  Description: Shareaholic is trusted by more than 200,000 websites, reaching 300,000,000 people each month.  Increase traffic and time on site for your content with Shareaholic’s related content tool, which recommends your own posts at the bottom of each article you publish. Choose between thumbnail and a list of links designs.
+  Version: 1.0.1
+  Description: Increase traffic and time on site for your content with Shareaholic’s related content tool, which recommends your own posts at the bottom of each article you publish. Choose between thumbnail and a list of links designs. Shareaholic is trusted by hundreds of thousands of websites and touches over 300 million people each month.
   Class Name: ShrRecommendationsSection
   Cloning: true
-  External: http://www.shareaholic.com/publishers/recommendations/
   Demo: http://www.shareaholic.com/publishers/recommendations/
   Workswith: main
  */
