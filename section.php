@@ -74,7 +74,7 @@ class ShrRecommendationsSection extends PageLinesSection {
     
     $params = array(
         'link' => get_permalink(get_the_ID()),
-        'apikey' => '8afa39428933be41f8afdb8ea21a495c',
+        'apikey' => 'ec480e025f2f0e86f41ebad0b2940ff1b',
         'number' => $number_recomm,
         'style' => $style
     );
@@ -108,7 +108,7 @@ class ShrRecommendationsSection extends PageLinesSection {
             'inputlabel' => 'Select Style: Choose between a list of links to your posts or thumbnails',
             'selectvalues' => array(
                 'image' => array('name' => 'Thumbnails'),
-                'text' => array('name' => 'Text')
+                'text'  => array('name' => 'Text')
             ),
         ),
         'shr-recomm-no' => array(
@@ -121,7 +121,7 @@ class ShrRecommendationsSection extends PageLinesSection {
         ),
         'shr-recomm-terms' => array(
             'type' => 'text_content',
-            'inputlabel' => 'By activating Shareaholic you agree to our <a href="http://www.shareaholic.com/terms/" target="_blank"> Terms of Service</a> and <a href="http://www.shareaholic.com/privacy/" target="_blank"> Privacy Policy</a>.',
+            'inputlabel' => 'By activating Shareaholic you agree to our <a href="http://www.shareaholic.com/terms/" target="_blank">Terms of Service</a> and <a href="http://www.shareaholic.com/privacy/" target="_blank">Privacy Policy</a>.',
             'title' => '',
             'shortexp' => '',
             'exp' => '',
