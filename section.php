@@ -1,6 +1,6 @@
 <?php
 /*
-  Section: Shareaholic Related Content Widget
+  Section: Shareaholic Related Content Plugin
   Author: Shareaholic
   Author URI: http://shareaholic.com
   Version: 1.0.0
@@ -38,16 +38,17 @@
  * 
  * File Naming Conventions
  * -------------------------------------
- *  section.php 		- The primary php loader for the section.
- *  style.css 			- Basic CSS styles contains all structural information, no color (autoloaded)
- *  images/				- Image folder. 
- *  thumb.png			- Primary branding graphic (300px by 225px - autoloaded)
+ *  section.php 		  - The primary php loader for the section.
+ *  style.css 			  - Basic CSS styles contains all structural information, no color (autoloaded)
+ *  images/				    - Image folder. 
+ *  thumb.png			    - Primary branding graphic (300px by 225px - autoloaded)
  *  screenshot.png		- Primary Screenshot (300px by 225px)
  *  screenshot-1.png 	- Additional screenshots: (screenshot-1.png -2 -3 etc...optional).
- *  icon.png			- Portable icon format (16px by 16px)
- * 	color.less			- Computed color control file (autoloaded)
+ *  icon.png			    - Portable icon format (16px by 16px)
+ * 	color.less			  - Computed color control file (autoloaded)
  *
  */
+ 
 class ShrRecommendationsSection extends PageLinesSection {
 
   function section_styles() {
@@ -100,21 +101,8 @@ class ShrRecommendationsSection extends PageLinesSection {
   function section_optionator($settings) {
 
     $settings = wp_parse_args($settings, $this->optionator_default);
+    
     $options = array(
-        /**  'fittext-text' => array(
-          'title' => 'FitText Text',
-          'type' => 'text',
-          'inputlabel' => 'Add Text',
-          'exp' => 'This is a long explaination' ,
-          'shortexp' => 'Short explaination'
-          ),
-          'fittext-font' => array(
-          'title' => 'FitText Font',
-          'type' => 'fonts',
-          'inputlabel' => 'Add Font',
-          'exp' => 'This is a long explaination' ,
-          'shortexp' => 'Short explaination'
-          ),* */
         'shr-recomm-style' => array(
             'type' => 'select',
             'inputlabel' => 'Select Style: Choose between a list of links to your posts or thumbnails',
@@ -139,15 +127,14 @@ class ShrRecommendationsSection extends PageLinesSection {
             'exp' => '',
         )
     );
+    
     $tab_settings = array(
         'id' => 'shr-recomm-options',
-        'name' => 'Shareaholic Related Content Widget Settings',
+        'name' => 'Shareaholic Related Content Plugin Settings',
         'icon' => $this->icon,
         'clone_id' => $settings['clone_id'],
         'active' => $settings['active']
     );
     register_metatab($tab_settings, $options, $this->class_name);
   }
-
 }
-
