@@ -1,6 +1,6 @@
 <?php
 /*
-  Section: Shareaholic Related Content Plugin
+  Section: Shareaholic Related Content
   Author: Shareaholic
   Author URI: http://shareaholic.com
   Version: 1.0.1
@@ -129,7 +129,7 @@ class ShrRecommendationsSection extends PageLinesSection {
     
     $tab_settings = array(
         'id' => 'shr-recomm-options',
-        'name' => 'Shareaholic Related Content Plugin Settings',
+        'name' => 'Shareaholic Related Content Settings',
         'icon' => $this->icon,
         'clone_id' => $settings['clone_id'],
         'active' => $settings['active']
